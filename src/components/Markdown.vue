@@ -2,6 +2,7 @@
   // Utilities
   import MarkdownIt from 'markdown-it'
   import MarkdownItKatex from 'markdown-it-katex'
+  import MarkdownItHighlight from 'markdown-it-highlightjs'
 
   // Utilities
   // import {
@@ -36,7 +37,9 @@
         html: true,
         linkify: true,
         typographer: true
-      }).use(MarkdownItKatex, { throwOnError: false, errorColor: '#FF5252' })
+      })
+      .use(MarkdownItKatex, { throwOnError: false, errorColor: '#FF5252' })
+      .use(MarkdownItHighlight)
       // let code = this.code || this.source
       // if (!this.code) {
       //   if (this.$slots.default) {
@@ -88,4 +91,26 @@
 
 <style scoped>
  @import url("https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css");
+</style>
+
+<style>
+  .v-application code {
+    box-shadow: none;
+    background-color: var(--v-background-base);
+  }
+  .v-application code:before {
+    content: "";
+    letter-spacing: -1px;
+  }
+  .v-application code:after {
+    content: "";
+    letter-spacing: -1px;
+  }
+  pre {
+    overflow: auto;
+  }
+  pre code{
+    border-radius: 8px;
+    padding: 12px;
+  }
 </style>
