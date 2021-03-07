@@ -4,7 +4,7 @@
 
     <Toolbar />
 
-    <v-content
+    <v-main
       class="base"
     >
       <v-container
@@ -12,7 +12,7 @@
       >
         <router-view></router-view>
       </v-container>
-    </v-content>
+    </v-main>
 
     <BackToTop :visibilityHeight="100" />
   </v-app>

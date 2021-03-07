@@ -108,6 +108,7 @@
   }
   pre {
     overflow: auto;
+    margin: 4px;
   }
   pre code{
     border-radius: 8px;

@@ -47,6 +47,7 @@
             v-bind:style="{ height: editorHeight, zIndex: 1}"
             :boxShadow="Boolean(false)"
             :subfield="subField"
+            :defaultOpen="subField? 'preview' : 'edit'"
           />
         </div>
 

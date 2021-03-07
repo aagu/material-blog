@@ -113,6 +113,16 @@ module.exports = {
                   priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
                   test: /[\\/]node_modules[\\/]_?vuetify(.*)/ // in order to adapt to cnpm
                 },
+                mavonEditor: {
+                  name: 'chunk-mavon-editor', // split mavon-editor into a single package
+                  priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
+                  test: /[\\/]node_modules[\\/]_?mavon-editor(.*)/ // in order to adapt to cnpm
+                },
+                highlightJs: {
+                  name: 'chunk-highlightjs', // split markdown-it-highlightjs into a single package
+                  priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
+                  test: /[\\/]node_modules[\\/]_?markdown-it-highlightjs(.*)/ // in order to adapt to cnpm
+                },
                 commons: {
                   name: 'chunk-commons',
                   test: resolve('src/components'), // can customize your rules
